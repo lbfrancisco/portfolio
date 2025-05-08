@@ -2,5 +2,16 @@
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
 	"extends": [
 		"@lbfrancisco/biome-config"
-	]
+	],
+	"linter": {
+		"ignore": [
+			".next",
+			"node_modules",
+			"out",
+			"dist",
+			"build",
+			"coverage",
+			".turbo"
+		]
+	}
 }
