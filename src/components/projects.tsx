@@ -1,7 +1,16 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CalendarDaysIcon, GraduationCapIcon } from 'lucide-react'
+
+import { projects } from '../data/projects.json'
+import ProjectCard from './project-card'
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from './ui/carousel'
 
 export default function Projects() {
 	return (
@@ -30,7 +39,39 @@ export default function Projects() {
 					Projetos
 				</motion.h2>
 				<div className="flex justify-center items-stretch gap-6">
-					<span className="text-zinc-400">Em desenvolvimento...</span>
+					{projects.length === 0 && (
+						<span className="text-zinc-400">
+							Não há nenhum projeto para ser exibido.
+						</span>
+					)}
+					<Carousel
+						opts={{
+							align: 'start',
+						}}
+						className="w-full"
+					>
+						<CarouselContent>
+							{projects.length > 0 &&
+								projects.map((project) => {
+									return (
+										<CarouselItem
+											key={project.id}
+											className="md:basis-1/1 lg:basis-1/2"
+										>
+											<ProjectCard
+												title={project.title}
+												description={project.description}
+												technologies={project.technologies}
+												image={project.image}
+												github={project.github}
+											/>
+										</CarouselItem>
+									)
+								})}
+						</CarouselContent>
+						<CarouselPrevious />
+						<CarouselNext />
+					</Carousel>
 				</div>
 			</div>
 		</motion.section>

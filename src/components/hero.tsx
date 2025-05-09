@@ -6,7 +6,12 @@ import { Badge } from './ui/badge'
 
 import { motion } from 'framer-motion'
 
-import { DownloadIcon } from 'lucide-react'
+import { ArrowDown, DownloadIcon } from 'lucide-react'
+import LinkButton from './link-button'
+import Grid from './animata/background/grid'
+import Image from 'next/image'
+
+import image from '../assets/prj_portfolio.png'
 
 export default function Hero() {
 	return (
@@ -22,44 +27,75 @@ export default function Hero() {
 					transition: { duration: 0.6, ease: 'easeOut' },
 				},
 			}}
-			className="max-w-[1280px] mx-auto space-y-6 pt-32 pb-24"
+			className="max-w-[1280px] mx-auto py-64"
 		>
+			<div className="relative space-y-6">
+				<motion.div
+					initial={{ opacity: 0, x: 20 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 0.5, delay: 0.2 }}
+				>
+					<Badge variant="outline">Full-stack Developer</Badge>
+				</motion.div>
+
+				<motion.h1
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.2 }}
+					className="text-5xl font-bold text-zinc-100 leading-tight"
+				>
+					<p>Sou um desenvolvedor que encara</p>
+					<p>desafios e transforma isso em</p>
+					<CycleText />
+					<span className="italic text-sm text-zinc-300">
+						"Penso, logo codifico."
+					</span>
+				</motion.h1>
+				<motion.div
+					initial={{ opacity: 0, scale: 1.1 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5, delay: 0.2 }}
+					className="flex items-center gap-4"
+				>
+					<LinkButton
+						download="curriculo-lucas-francisco.pdf"
+						href="/curriculo-lucas-francisco.pdf"
+					>
+						<DownloadIcon className="size-4" />
+						Currículo
+					</LinkButton>
+				</motion.div>
+			</div>
+
 			<motion.div
-				initial={{ opacity: 0, x: 20 }}
-				animate={{ opacity: 1, x: 0 }}
-				transition={{ duration: 0.5, delay: 0.2 }}
+				className="absolute bottom-30 left-1/2 transform -translate-x-1/2"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, y: [0, 10, 0] }}
+				transition={{
+					duration: 1.5,
+					delay: 1,
+					repeat: Number.POSITIVE_INFINITY,
+				}}
 			>
-				<Badge variant="outline">Full-stack Developer</Badge>
+				<ArrowDown className="h-6 w-6 text-muted-foreground" />
 			</motion.div>
 
-			<motion.h1
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5, delay: 0.2 }}
-				className="text-5xl font-bold text-zinc-100 leading-tight"
-			>
-				<p>Sou um desenvolvedor que encara</p>
-				<p>desafios e transforma isso em</p>
-				<CycleText />
-				<span className="italic text-sm text-zinc-300">
-					"Penso, logo codifico."
-				</span>
-			</motion.h1>
-			<motion.div
-				initial={{ opacity: 0, scale: 1.1 }}
-				animate={{ opacity: 1, scale: 1 }}
-				transition={{ duration: 0.5, delay: 0.2 }}
-				className="flex items-center gap-4"
-			>
-				<Link
-					href=""
-					download="curriculo-lucas-francisco.pdf"
-					className="flex items-center justify-center gap-2 text-sm font-bold px-6 py-2 cursor-pointer rounded-full bg-sky-400 border border-sky-300 text-zinc-900 transition-all duration-300 hover:scale-105 hover:bg-sky-400/90"
+			<div className="absolute inset-0 -z-1">
+				<div className="absolute top-20 left-10 h-36 w-36 bg-primary/20 rounded-full blur-3xl" />
+				<div className="absolute bottom-20 right-10 h-64 w-64 bg-emerald-500/10 rounded-full blur-3xl" />
+				<div className="absolute top-1/3 right-1/3 h-48 w-48 bg-sky-500/10 rounded-full blur-3xl" />
+				<Grid
+					className="absolute -top-15 -right-0 h-full w-full bg-sky-500/10"
+					color="#111111"
+					style={{
+						opacity: 0.1,
+						backgroundColor: 'transparent',
+					}}
+					size={15}
 				>
-					<DownloadIcon className="size-4" />
-					Currículo
-				</Link>
-			</motion.div>
+					{' '}
+				</Grid>
+			</div>
 		</motion.section>
 	)
 }

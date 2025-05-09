@@ -1,0 +1,18 @@
+{
+	"academy": [
+		{
+			"id": 1,
+			"title": "Análise e desenvolvimento de sistemas",
+			"institution": "Uninter",
+			"period": "2025 - 2027",
+			"description": "Graduação focada em criar sistemas: programação, banco de dados, web, mobile, engenharia de software e segurança da informação."
+		},
+		{
+			"id": 2,
+			"title": "Full-stack Developer",
+			"institution": "Rocketseat",
+			"period": "2022 - 2023",
+			"description": "Formação Full Stack da Rocketseat com foco em JavaScript, Node.js e React. Do básico ao avançado em desenvolvimento web."
+		}
+	]
+}

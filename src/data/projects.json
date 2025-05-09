@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portifólio",
+      "description": "Projeto do meu portifólio, onde você pode ver um pouco do meu trabalho e o que eu faço.",
+      "technologies": [
+        "typescript",
+        "nextjs",
+        "reactjs"
+      ],
+      "image": "prj_portfolio.png",
+      "github": "https://github.com/lbfrancisco/portfolio"
+    },
+    {
+      "id": 2,
+      "title": "Desafio Itau Backend",
+      "description": "Desafio de backend do Itau, onde desenvolvi uma API para gerenciar transações financeiras. A criação de uma transação, deletar todas as transações e listas as estatísticas das transações dos últimos 60 segundos.",
+      "technologies": [
+        "typescript",
+        "fastify",
+        "swagger",
+        "zod"
+      ],
+      "image": "prj_backend_itau.png",
+      "github": "https://github.com/lbfrancisco/desafio-itau-backend"
+    },
+    {
+      "id": 3,
+      "title": "Next.js SaaS + RBAC",
+      "description": "Este projeto possui todo boilerplate necessário para a criação de um SaaS multi-tenant. Feito com Next.js incluindo autenticação e autorização por RBAC.",
+      "technologies": [
+        "typescript",
+        "nextjs",
+        "reactjs"
+      ],
+      "image": "prj_portfolio.png",
+      "github": "https://github.com/lbfrancisco/next-saas-rbac"
+    }
+  ]
+}

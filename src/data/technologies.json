@@ -1,0 +1,17 @@
+{
+  "technologies": [
+    "typescript",
+    "nodejs",
+    "fastify",
+    "nestjs",
+    "zod",
+    "postgresql",
+    "prisma",
+    "sqlite",
+    "nextjs",
+    "reactjs",
+    "tailwindcss",
+    "git",
+    "github"
+  ]
+}

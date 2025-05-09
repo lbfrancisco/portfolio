@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CalendarDaysIcon, GraduationCapIcon, MailIcon } from 'lucide-react'
-import Link from 'next/link'
+import { MailIcon } from 'lucide-react'
+import LinkButton from './link-button'
 
 export default function Contact() {
 	return (
@@ -35,7 +35,7 @@ export default function Contact() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
-						className="text-lg text-zinc-400 text-center max-w-2xl mx-auto"
+						className="text-zinc-400 text-center max-w-2xl mx-auto"
 					>
 						Estou sempre aberto a novas oportunidades e colaborações. Se você
 						tem um projeto interessante ou apenas quer bater um papo, não hesite
@@ -48,13 +48,10 @@ export default function Contact() {
 						transition={{ duration: 0.5, delay: 0.6 }}
 						className="flex justify-center items-center gap-6"
 					>
-						<Link
-							href="mailto:lucasbarroso318@gmail.com"
-							className="flex items-center justify-center gap-2 text-sm font-bold px-6 py-2 cursor-pointer rounded-full bg-sky-400 border border-sky-300 text-zinc-900 transition-all duration-300 hover:scale-105 hover:bg-sky-400/90"
-						>
+						<LinkButton href="mailto:lucasbarroso318@gmail.com">
 							<MailIcon className="size-6" />
 							Envie um e-mail
-						</Link>
+						</LinkButton>
 					</motion.div>
 				</div>
 			</div>

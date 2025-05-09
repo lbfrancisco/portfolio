@@ -2,28 +2,7 @@
 
 import Image from 'next/image'
 
-import {
-	SiFastify,
-	SiGit,
-	SiGithub,
-	SiNestjs,
-	SiNextdotjs,
-	SiNodedotjs,
-	SiPostgresql,
-	SiPrisma,
-	SiReact,
-	SiSqlite,
-	SiTailwindcss,
-	SiTypescript,
-	SiZod,
-} from 'react-icons/si'
 import me from '../assets/me.jpg'
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger,
-} from './ui/tooltip'
 
 import { motion } from 'framer-motion'
 import Stacks from './stacks'
@@ -75,7 +54,7 @@ export default function AboutMe() {
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.5, delay: 0.2 }}
-								className="text-zinc-300"
+								className="text-zinc-400"
 							>
 								Sou desenvolvedor Full-Stack com foco em Back-end, apaixonado
 								por transformar ideias complexas em soluções simples, intuitivas
