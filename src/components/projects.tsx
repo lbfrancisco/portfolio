@@ -27,14 +27,14 @@ export default function Projects() {
 					transition: { duration: 0.6, ease: 'easeOut' },
 				},
 			}}
-			className="py-24 bg-zinc-900/20 border-t border-zinc-900"
+			className="py-24 bg-zinc-900/20 border-t border-zinc-900 px-6"
 		>
 			<div className="max-w-[1280px] mx-auto space-y-6">
 				<motion.h2
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.2 }}
-					className="text-4xl font-bold text-zinc-100 leading-tight text-center"
+					className="text-3xl md:text-4xl font-bold text-zinc-100 leading-tight text-center"
 				>
 					Projetos
 				</motion.h2>
@@ -48,7 +48,7 @@ export default function Projects() {
 						opts={{
 							align: 'start',
 						}}
-						className="w-full"
+						className="w-full relative"
 					>
 						<CarouselContent>
 							{projects.length > 0 &&
@@ -56,7 +56,7 @@ export default function Projects() {
 									return (
 										<CarouselItem
 											key={project.id}
-											className="md:basis-1/1 lg:basis-1/2"
+											className="basis-1/1 lg:basis-1/2"
 										>
 											<ProjectCard
 												title={project.title}
@@ -69,8 +69,8 @@ export default function Projects() {
 									)
 								})}
 						</CarouselContent>
-						<CarouselPrevious />
-						<CarouselNext />
+						<CarouselPrevious className="absolute -bottom-4 left-4 top-auto translate-y-full" />
+						<CarouselNext className="absolute -bottom-4 right-4 top-auto translate-y-full" />
 					</Carousel>
 				</div>
 			</div>

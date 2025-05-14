@@ -27,22 +27,24 @@ export default function Hero() {
 					transition: { duration: 0.6, ease: 'easeOut' },
 				},
 			}}
-			className="max-w-[1280px] mx-auto py-64"
+			className="max-w-screen-xl mx-auto w-full py-32 px-6 md:py-64"
 		>
-			<div className="relative space-y-6">
+			<div className="relative space-y-6 flex flex-col items-center justify-center md:items-baseline md:justify-baseline">
 				<motion.div
 					initial={{ opacity: 0, x: 20 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5, delay: 0.2 }}
 				>
-					<Badge variant="outline">Full-stack Developer</Badge>
+					<Badge variant="outline" className="text-sm">
+						Full-stack Developer
+					</Badge>
 				</motion.div>
 
 				<motion.h1
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.2 }}
-					className="text-5xl font-bold text-zinc-100 leading-tight"
+					className="text-4xl md:text-5xl font-bold text-zinc-100 leading-tight text-center md:text-left"
 				>
 					<p>Sou um desenvolvedor que encara</p>
 					<p>desafios e transforma isso em</p>

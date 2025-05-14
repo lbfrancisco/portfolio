@@ -8,7 +8,7 @@ import Projects from '@/components/projects'
 
 export default function Home() {
 	return (
-		<div>
+		<main>
 			<Navbar />
 			<Hero />
 			<AboutMe />
@@ -16,6 +16,6 @@ export default function Home() {
 			<Projects />
 			<Contact />
 			<Footer />
-		</div>
+		</main>
 	)
 }

@@ -25,7 +25,7 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR">
 			<body
-				className={`${geistSans.variable} ${interSans.variable} antialiased dark`}
+				className={`${geistSans.variable} ${interSans.variable} min-h-screen m-0 overflow-x-hidden overflow-y-auto antialiased dark`}
 			>
 				{children}
 			</body>

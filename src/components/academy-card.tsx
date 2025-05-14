@@ -14,7 +14,7 @@ export default function AcademyCard({
 	description,
 }: AcademyCardProps) {
 	return (
-		<div className="flex-1 border rounded-md p-4 bg-zinc-900/30 space-y-4 min-h-[250px] max-w-[450px] hover:border-zinc-100 transition-colors duration-700 ease-in-out">
+		<div className="flex-1 border rounded-md p-4 bg-zinc-900/30 space-y-4 min-h-[256px] h-full hover:border-zinc-100 transition-colors duration-700 ease-in-out">
 			<div className="flex items-center gap-2">
 				<div className="bg-zinc-800 p-2 rounded-md self-start">
 					<GraduationCapIcon className="w-6 h-6 text-zinc-100" />

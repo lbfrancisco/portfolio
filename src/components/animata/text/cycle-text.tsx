@@ -29,7 +29,7 @@ export default function CycleText() {
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: -30 }}
 					transition={{ duration: 0.1 }}
-					className="font-inter text-5xl bg-gradient-to-b from-sky-400 to-emerald-400 bg-clip-text text-transparent font-bold"
+					className="font-inter text-4xl md:text-5xl bg-gradient-to-b from-sky-400 to-emerald-400 bg-clip-text text-transparent font-bold"
 				>
 					{words[index]}
 				</motion.span>

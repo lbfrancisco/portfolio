@@ -38,7 +38,7 @@ export default function ProjectCard({
 					</div>
 
 					{Array.isArray(technologies) && technologies.length > 0 && (
-						<div className="flex items-center justify-between gap-2">
+						<div className="items-center justify-between gap-2 hidden md:flex visible">
 							<div className="flex items-center gap-2">
 								{technologies.map((tech) => (
 									<Stack key={tech} variant={tech} />

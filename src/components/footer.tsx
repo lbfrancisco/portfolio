@@ -3,7 +3,7 @@ import { SiGithub, SiLinkedin } from 'react-icons/si'
 
 export default function Footer() {
 	return (
-		<div className="border-t boder-zinc-900">
+		<div className="border-t boder-zinc-900 px-6">
 			<div className="max-w-[1280px] mx-auto flex items-center justify-between py-8 px-4">
 				<div className="text-sm font-medium text-zinc-400">
 					<span>© 2025 Lucas Francisco. Todos os direitos reservados.</span>

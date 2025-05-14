@@ -26,16 +26,18 @@ export default function Stacks() {
 		<motion.div
 			initial="hidden"
 			animate="visible"
-			className="flex items-center justify-center gap-6 mt-8"
+			className="w-full flex flex-row flex-wrap gap-4 md:flex-nowrap md:items-center md:justify-center"
 		>
-			{technologies.length > 0 &&
-				technologies.map((stack, index) => {
-					return (
-						<motion.div key={stack} variants={itemVariants} custom={index}>
-							<Stack variant={stack} />
-						</motion.div>
-					)
-				})}
+			{technologies.map((stack, index) => (
+				<motion.div
+					key={stack}
+					variants={itemVariants}
+					custom={index}
+					className="flex-shrink-0" /* garante que cada item não encolha demais */
+				>
+					<Stack variant={stack} />
+				</motion.div>
+			))}
 		</motion.div>
 	)
 }

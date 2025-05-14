@@ -10,10 +10,10 @@ export default function Navbar() {
 			initial={{ y: -100, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
 			transition={{ duration: 0.5, ease: 'easeOut' }}
-			className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-zinc-900 py-6"
+			className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-zinc-900"
 		>
-			<div className="max-w-[1280px] mx-auto flex items-center justify-between">
-				<ul className="flex items-center gap-6 text-zinc-300 font-medium text-sm">
+			<div className="max-w-screen-xl mx-auto w-full flex items-center justify-center md:justify-between p-6">
+				<ul className="hidden md:flex md:items-center md:gap-6 md:text-zinc-300 md:font-medium md:text-sm">
 					<li>
 						<Link href="#home" className="hover:text-sky-400 transition-colors">
 							Início
