@@ -13,8 +13,11 @@ const interSans = Inter({
 })
 
 export const metadata: Metadata = {
-	title: 'Lucas Francisco | @lbfrancisco',
-	description: 'Um portóflio',
+	title: 'Lucas Francisco | Portifólio',
+	description: 'Portifólio de Lucas Francisco, desenvolvedor Full-stack',
+	icons: {
+		icon: '/favicon.svg',
+	},
 }
 
 export default function RootLayout({

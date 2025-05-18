@@ -17,7 +17,7 @@ export default function ProjectCard({
 	github,
 }: ProjectCardProps) {
 	return (
-		<div className="bg-zinc-900/30 rounded-md border overflow-hidden h-full">
+		<div className="bg-zinc-900/30 rounded-md border overflow-hidden h-full hover:border-zinc-100 transition-colors duration-700 ease-in-out">
 			<div className="w-full">
 				<img
 					src={image}
